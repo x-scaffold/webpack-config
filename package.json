@@ -1,5 +1,5 @@
 {
-  "name": "webpack-config",
+  "name": "@x-scaffold/webpack-config",
   "version": "0.0.1",
   "description": "webpack base config",
   "main": "index.js",
