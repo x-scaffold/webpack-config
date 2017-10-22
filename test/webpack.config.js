@@ -18,17 +18,19 @@ module.exports = {
     filename: 'assets/[name].[hash].js',
   },
   module: {
-    rules: webpackConfig.styleLoaders({sourceMap: false, extract: false,}).concat([
-      // {
-      //   test: /\.(js|vue)$/,
-      //   loader: 'eslint-loader',
-      //   enforce: 'pre',
-      //   include: [path.resolve('src')],
-      //   exclude: /node_modules/,
-      //   options: {
-      //     formatter: require('eslint-friendly-formatter')
-      //   }
-      // },
+    rules: webpackConfig.styleLoaders({
+      sourceMap: false,
+      extract: false, }).concat([
+      {
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [path.resolve('src')],
+        exclude: /node_modules/,
+        options: {
+          formatter: require('eslint-friendly-formatter')
+        }
+      },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
